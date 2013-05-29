@@ -1,0 +1,312 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs for complexType Facilities in CSD XML schema</title>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+                      EnsureInFrame('ComplexType', 'facilities');
+                    </script><div class="pageheader">
+         Documentation for CSD XML schema
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>ComplexType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>Facilities</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="csd_xsd.html">CSD.xsd</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Abstract</b></td>
+               <td>False</td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="175,597,427,624" href="facilityrecordlastupdate.html" alt="Drilldown into facilityRecordLastUpdate"></area>
+                     <area shape="rect" coords="175,564,438,591" href="facilityrecordcreationdate.html" alt="Drilldown into facilityRecordCreationDate"></area>
+                     <area shape="rect" coords="198,531,329,558" href="facilityprovider.html" alt="Drilldown into facilityProvider"></area>
+                     <area shape="rect" coords="198,498,322,525" href="facilityservice.html" alt="Drilldown into facilityService"></area>
+                     <area shape="rect" coords="198,465,474,492" href="facilityoperatinghours.html" alt="Drilldown into facilityOperatingHours"></area>
+                     <area shape="rect" coords="198,432,397,459" href="facilityorgparent.html" alt="Drilldown into facilityOrgParent"></area>
+                     <area shape="rect" coords="198,399,441,426" href="facilityaccesspoint.html" alt="Drilldown into facilityAccessPoint"></area>
+                     <area shape="rect" coords="198,366,410,393" href="facilitylanguage.html" alt="Drilldown into facilityLanguage"></area>
+                     <area shape="rect" coords="198,333,404,360" href="facilityattribute.html" alt="Drilldown into facilityAttribute"></area>
+                     <area shape="rect" coords="198,300,397,327" href="facilitygeocode.html" alt="Drilldown into facilityGeocode"></area>
+                     <area shape="rect" coords="198,267,422,294" href="facilitycontactperson.html" alt="Drilldown into facilityContactPerson"></area>
+                     <area shape="rect" coords="198,234,396,261" href="facilityaddress.html" alt="Drilldown into facilityAddress"></area>
+                     <area shape="rect" coords="198,201,404,228" href="facilityothername.html" alt="Drilldown into facilityOtherName"></area>
+                     <area shape="rect" coords="175,168,349,195" href="facilityname.html" alt="Drilldown into facilityName"></area>
+                     <area shape="rect" coords="175,135,352,162" href="facilitystatus.html" alt="Drilldown into facilityStatus"></area>
+                     <area shape="rect" coords="175,102,408,129" href="facilitytypedescription.html" alt="Drilldown into facilityTypeDescription"></area>
+                     <area shape="rect" coords="175,69,343,96" href="facilitytype.html" alt="Drilldown into facilityType"></area>
+                     <area shape="rect" coords="198,36,400,63" href="otherfacilityid.html" alt="Drilldown into otherFacilityID"></area>
+                     <area shape="rect" coords="175,3,330,30" href="facilityid.html" alt="Drilldown into facilityID"></area></map><img src="images/facilities.png" border="0" alt="XSD Diagram of Facilities" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;xs:complexType name="Facilities"&gt;
+    &lt;xs:sequence&gt;
+        &lt;xs:element name="facilityID" type="xs:ID" /&gt;
+        &lt;xs:element name="otherFacilityID" type="Identifiers" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="facilityType" type="xs:string" /&gt;
+        &lt;xs:element name="facilityTypeDescription" type="xs:string" /&gt;
+        &lt;xs:element name="facilityStatus" type="xs:string" /&gt;
+        &lt;xs:element name="facilityName" type="xs:string" /&gt;
+        &lt;xs:element name="facilityOtherName" type="Names" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="facilityAddress" type="Addresses" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="facilityContactPerson" type="Persons" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="facilityGeocode" type="Geocodes" minOccurs="0" /&gt;
+        &lt;xs:element name="facilityAttribute" type="ValuePairs" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="facilityLanguage" type="Languages" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="facilityAccessPoint" type="ContactPoints" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="facilityOrgParent" type="xs:ID" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="facilityOperatingHours" type="OperatingHours" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="facilityService" maxOccurs="unbounded"&gt;
+            &lt;xs:complexType&gt;
+                &lt;xs:sequence&gt;
+                    &lt;xs:element name="facilityID" type="xs:ID" /&gt;
+                    &lt;xs:element name="serviceID" type="xs:ID" /&gt;
+                    &lt;xs:element name="facilityServiceOrg" type="xs:ID" minOccurs="0" /&gt;
+                    &lt;xs:element name="facilityServiceName" type="Names" minOccurs="0" maxOccurs="unbounded" /&gt;
+                    &lt;xs:element name="facilityServiceLanguage" type="Languages" minOccurs="0" maxOccurs="unbounded" /&gt;
+                    &lt;xs:element name="facilityServiceOperatingHours" type="OperatingHours" minOccurs="0" maxOccurs="unbounded" /&gt;
+                    &lt;xs:element name="facilityServiceFreeBusyKey" minOccurs="0"&gt;
+                        &lt;xs:complexType&gt;
+                            &lt;xs:sequence&gt;
+                                &lt;xs:element name="facilityID" type="xs:ID" /&gt;
+                                &lt;xs:element name="serviceID" type="xs:ID" /&gt;
+                                &lt;xs:element name="FreeBusyURI" type="xs:string" /&gt;
+                                &lt;xs:element name="facilityServiceFreeBusyAttendee" type="xs:string" /&gt;
+                            &lt;/xs:sequence&gt;
+                        &lt;/xs:complexType&gt;
+                    &lt;/xs:element&gt;
+                    &lt;xs:element name="facilityServiceProvider" minOccurs="0" maxOccurs="unbounded"&gt;
+                        &lt;xs:complexType&gt;
+                            &lt;xs:sequence&gt;
+                                &lt;xs:element name="facilityID" type="xs:ID" /&gt;
+                                &lt;xs:element name="serviceID" type="xs:ID" /&gt;
+                                &lt;xs:element name="providerID" type="xs:ID" /&gt;
+                                &lt;xs:element name="facilityServiceProviderOperatingHours" type="OperatingHours" minOccurs="0" /&gt;
+                                &lt;xs:element name="facilityServiceProviderFreeBusyKey" minOccurs="0"&gt;
+                                    &lt;xs:complexType&gt;
+                                        &lt;xs:sequence&gt;
+                                            &lt;xs:element name="facilityID" type="xs:ID" /&gt;
+                                            &lt;xs:element name="serviceID" type="xs:ID" /&gt;
+                                            &lt;xs:element name="providerID" type="xs:ID" /&gt;
+                                            &lt;xs:element name="FreeBusyURI" type="xs:string" /&gt;
+                                            &lt;xs:element name="facilityServiceProviderFreeBusyAttendee" type="xs:string" /&gt;
+                                        &lt;/xs:sequence&gt;
+                                    &lt;/xs:complexType&gt;
+                                &lt;/xs:element&gt;
+                            &lt;/xs:sequence&gt;
+                        &lt;/xs:complexType&gt;
+                    &lt;/xs:element&gt;
+                &lt;/xs:sequence&gt;
+            &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+        &lt;xs:element name="facilityProvider" minOccurs="0" maxOccurs="unbounded"&gt;
+            &lt;xs:complexType&gt;
+                &lt;xs:sequence&gt;
+                    &lt;xs:element name="facilityID" type="xs:ID" /&gt;
+                    &lt;xs:element name="provider" type="xs:ID" /&gt;
+                &lt;/xs:sequence&gt;
+            &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+        &lt;xs:element name="facilityRecordCreationDate" type="xs:dateTime" /&gt;
+        &lt;xs:element name="facilityRecordLastUpdate" type="xs:dateTime" /&gt;
+    &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityID</td>
+                        <td><a href="facilityid.html">facilityID</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">otherFacilityID</td>
+                        <td><a href="otherfacilityid.html">otherFacilityID</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityType</td>
+                        <td><a href="facilitytype.html">facilityType</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityTypeDescription</td>
+                        <td><a href="facilitytypedescription.html">facilityTypeDescription</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityStatus</td>
+                        <td><a href="facilitystatus.html">facilityStatus</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityName</td>
+                        <td><a href="facilityname.html">facilityName</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityOtherName</td>
+                        <td><a href="facilityothername.html">facilityOtherName</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityAddress</td>
+                        <td><a href="facilityaddress.html">facilityAddress</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityContactPerson</td>
+                        <td><a href="facilitycontactperson.html">facilityContactPerson</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityGeocode</td>
+                        <td><a href="facilitygeocode.html">facilityGeocode</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityAttribute</td>
+                        <td><a href="facilityattribute.html">facilityAttribute</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityLanguage</td>
+                        <td><a href="facilitylanguage.html">facilityLanguage</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityAccessPoint</td>
+                        <td><a href="facilityaccesspoint.html">facilityAccessPoint</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityOrgParent</td>
+                        <td><a href="facilityorgparent.html">facilityOrgParent</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityOperatingHours</td>
+                        <td><a href="facilityoperatinghours.html">facilityOperatingHours</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityService</td>
+                        <td><a href="facilityservice.html">facilityService</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityProvider</td>
+                        <td><a href="facilityprovider.html">facilityProvider</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityRecordCreationDate</td>
+                        <td><a href="facilityrecordcreationdate.html">facilityRecordCreationDate</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">facilityRecordLastUpdate</td>
+                        <td><a href="facilityrecordlastupdate.html">facilityRecordLastUpdate</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="derivationTree" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Derivation Tree:</b></td>
+            </tr>
+            <tr id="derivationTree_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><b><i>Facilities</i></b></li>
+                     <ul>
+                        <li><a href="facility.html">facility</a></li>
+                     </ul>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="references" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>References:</b></td>
+            </tr>
+            <tr id="references_body_id">
+               <td width="120px;"></td>
+               <td><a href="facility.html">facility</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter"> 
+         Generated using <a href="http://www.liquid-technologies.com/">Liquid XML 2013 Designer Edition (Trial) 11.0.9.4562</a><br></br>Featuring a validating <a href="http://www.liquid-technologies.com/XML-Editor.aspx">XML Editor</a></div>
+   </body>
+</html>

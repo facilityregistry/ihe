@@ -1,0 +1,683 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs for complexType CSD.xsd in CSD XML schema</title>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link href="styles/site.css" rel="stylesheet" type="text/css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+                      EnsureInFrame('Schema', 'csd_xsd');
+                    </script><div class="pageheader">
+         Documentation for CSD XML schema
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Schema Name:</b></td>
+               <td>CSD.xsd</td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>
+&lt;!--Created with Liquid XML 2013 Designer Edition (Trial) 11.0.9.4562 (http://www.liquid-technologies.com)--&gt;
+&lt;xs:schema elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;xs:complexType name="Organizations"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="orgID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="otherOrgID"
+                        type="Identifiers"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="orgType"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="orgTypeDescription"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="orgPrimaryName"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="otherName"
+                        type="Names"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="orgContactPerson"
+                        type="Persons"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="orgAdminAddress"
+                        type="Addresses"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="orgCredential"
+                        type="Credentials"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="orgLanguage"
+                        type="Languages"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="orgSpecialization"
+                        type="Specializations"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="orgContactPoint"
+                        type="ContactPoints"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="orgParent"
+                        type="xs:ID"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="orgRecordCreationDate"
+                        type="xs:dateTime" /&gt;
+            &lt;xs:element name="orgRecordLastUpdate"
+                        type="xs:dateTime" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Facilities"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="facilityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="otherFacilityID"
+                        type="Identifiers"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="facilityType"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="facilityTypeDescription"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="facilityStatus"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="facilityName"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="facilityOtherName"
+                        type="Names"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="facilityAddress"
+                        type="Addresses"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="facilityContactPerson"
+                        type="Persons"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="facilityGeocode"
+                        type="Geocodes"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="facilityAttribute"
+                        type="ValuePairs"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="facilityLanguage"
+                        type="Languages"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="facilityAccessPoint"
+                        type="ContactPoints"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="facilityOrgParent"
+                        type="xs:ID"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="facilityOperatingHours"
+                        type="OperatingHours"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="facilityService"
+                        maxOccurs="unbounded"&gt;
+                &lt;xs:complexType&gt;
+                    &lt;xs:sequence&gt;
+                        &lt;xs:element name="facilityID"
+                                    type="xs:ID" /&gt;
+                        &lt;xs:element name="serviceID"
+                                    type="xs:ID" /&gt;
+                        &lt;xs:element name="facilityServiceOrg"
+                                    type="xs:ID"
+                                    minOccurs="0" /&gt;
+                        &lt;xs:element name="facilityServiceName"
+                                    type="Names"
+                                    minOccurs="0"
+                                    maxOccurs="unbounded" /&gt;
+                        &lt;xs:element name="facilityServiceLanguage"
+                                    type="Languages"
+                                    minOccurs="0"
+                                    maxOccurs="unbounded" /&gt;
+                        &lt;xs:element name="facilityServiceOperatingHours"
+                                    type="OperatingHours"
+                                    minOccurs="0"
+                                    maxOccurs="unbounded" /&gt;
+                        &lt;xs:element name="facilityServiceFreeBusyKey"
+                                    minOccurs="0"&gt;
+                            &lt;xs:complexType&gt;
+                                &lt;xs:sequence&gt;
+                                    &lt;xs:element name="facilityID"
+                                                type="xs:ID" /&gt;
+                                    &lt;xs:element name="serviceID"
+                                                type="xs:ID" /&gt;
+                                    &lt;xs:element name="FreeBusyURI"
+                                                type="xs:string" /&gt;
+                                    &lt;xs:element name="facilityServiceFreeBusyAttendee"
+                                                type="xs:string" /&gt;
+                                &lt;/xs:sequence&gt;
+                            &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                        &lt;xs:element name="facilityServiceProvider"
+                                    minOccurs="0"
+                                    maxOccurs="unbounded"&gt;
+                            &lt;xs:complexType&gt;
+                                &lt;xs:sequence&gt;
+                                    &lt;xs:element name="facilityID"
+                                                type="xs:ID" /&gt;
+                                    &lt;xs:element name="serviceID"
+                                                type="xs:ID" /&gt;
+                                    &lt;xs:element name="providerID"
+                                                type="xs:ID" /&gt;
+                                    &lt;xs:element name="facilityServiceProviderOperatingHours"
+                                                type="OperatingHours"
+                                                minOccurs="0" /&gt;
+                                    &lt;xs:element name="facilityServiceProviderFreeBusyKey"
+                                                minOccurs="0"&gt;
+                                        &lt;xs:complexType&gt;
+                                            &lt;xs:sequence&gt;
+                                                &lt;xs:element name="facilityID"
+                                                            type="xs:ID" /&gt;
+                                                &lt;xs:element name="serviceID"
+                                                            type="xs:ID" /&gt;
+                                                &lt;xs:element name="providerID"
+                                                            type="xs:ID" /&gt;
+                                                &lt;xs:element name="FreeBusyURI"
+                                                            type="xs:string" /&gt;
+                                                &lt;xs:element name="facilityServiceProviderFreeBusyAttendee"
+                                                            type="xs:string" /&gt;
+                                            &lt;/xs:sequence&gt;
+                                        &lt;/xs:complexType&gt;
+                                    &lt;/xs:element&gt;
+                                &lt;/xs:sequence&gt;
+                            &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                    &lt;/xs:sequence&gt;
+                &lt;/xs:complexType&gt;
+            &lt;/xs:element&gt;
+            &lt;xs:element name="facilityProvider"
+                        minOccurs="0"
+                        maxOccurs="unbounded"&gt;
+                &lt;xs:complexType&gt;
+                    &lt;xs:sequence&gt;
+                        &lt;xs:element name="facilityID"
+                                    type="xs:ID" /&gt;
+                        &lt;xs:element name="provider"
+                                    type="xs:ID" /&gt;
+                    &lt;/xs:sequence&gt;
+                &lt;/xs:complexType&gt;
+            &lt;/xs:element&gt;
+            &lt;xs:element name="facilityRecordCreationDate"
+                        type="xs:dateTime" /&gt;
+            &lt;xs:element name="facilityRecordLastUpdate"
+                        type="xs:dateTime" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Providers"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="providerID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="otherProviderID"
+                        type="Identifiers"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="providerType"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="providerTypeDescription"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="providerStatus"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="providerDemographic"
+                        type="Persons" /&gt;
+            &lt;xs:element name="providerLanguage"
+                        type="Languages"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="providerOrg"
+                        maxOccurs="unbounded"&gt;
+                &lt;xs:complexType&gt;
+                    &lt;xs:all&gt;
+                        &lt;xs:element name="providerID"
+                                    type="xs:ID" /&gt;
+                        &lt;xs:element name="orgID"
+                                    type="xs:ID" /&gt;
+                    &lt;/xs:all&gt;
+                &lt;/xs:complexType&gt;
+            &lt;/xs:element&gt;
+            &lt;xs:element name="providerFacility"
+                        minOccurs="0"
+                        maxOccurs="unbounded"&gt;
+                &lt;xs:complexType&gt;
+                    &lt;xs:all&gt;
+                        &lt;xs:element name="providerID"
+                                    type="xs:ID" /&gt;
+                        &lt;xs:element name="facilityID"
+                                    type="xs:ID" /&gt;
+                    &lt;/xs:all&gt;
+                &lt;/xs:complexType&gt;
+            &lt;/xs:element&gt;
+            &lt;xs:element name="providerFacilityService"
+                        minOccurs="0"
+                        maxOccurs="unbounded"&gt;
+                &lt;xs:complexType&gt;
+                    &lt;xs:all&gt;
+                        &lt;xs:element name="providerID"
+                                    type="xs:ID" /&gt;
+                        &lt;xs:element name="facilityID"
+                                    type="xs:ID" /&gt;
+                        &lt;xs:element name="serviceID"
+                                    type="xs:ID" /&gt;
+                    &lt;/xs:all&gt;
+                &lt;/xs:complexType&gt;
+            &lt;/xs:element&gt;
+            &lt;xs:element name="providerCredential"
+                        type="Credentials"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="providerSpecialty"
+                        type="Specializations"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="providerRecordCreationDate"
+                        type="xs:dateTime" /&gt;
+            &lt;xs:element name="providerRecordLastUpdate"
+                        type="xs:dateTime" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Identifiers"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="otherID"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="issuingAuthority"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Names"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="CommonName"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="honorific"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="foreName"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="otherNames"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="surName"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="suffix"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Persons"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="Name"
+                        type="Names"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="contactPoint"
+                        type="ContactPoints"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="personAddress"
+                        type="Addresses"
+                        minOccurs="0"
+                        maxOccurs="unbounded" /&gt;
+            &lt;xs:element name="personGender"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="ContactPoints"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="contactPointType"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="contactPointEquipment"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="contactPointPurpose"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="encryptioinCertificate"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="contactPointText"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Addresses"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="AddressLine"
+                            maxOccurs="unbounded"&gt;
+                    &lt;xs:complexType&gt;
+                        &lt;xs:simpleContent&gt;
+                            &lt;xs:extension base="xs:string"&gt;
+                                &lt;xs:attribute name="addressType"
+                                              type="xs:string"
+                                              use="required" /&gt;
+                            &lt;/xs:extension&gt;
+                        &lt;/xs:simpleContent&gt;
+                    &lt;/xs:complexType&gt;
+                &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Credentials"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="credentialType"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="credentialName"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="credentialNumber"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="issuingAuthority"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="credentialDescription"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="credentialIssueDate"
+                        type="xs:date"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="credentialRenewalDate"
+                        type="xs:date"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Specializations"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="specializationCode"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="specializationDescription"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Languages"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="languageCode"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="languageDescription"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Geocodes"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="latitude"
+                        type="xs:decimal" /&gt;
+            &lt;xs:element name="longitude"
+                        type="xs:decimal" /&gt;
+            &lt;xs:element name="altitude"
+                        type="xs:decimal"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="coordinateSystem"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="ValuePairs"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="attributeType"
+                        type="xs:string" /&gt;
+            &lt;xs:choice&gt;
+                &lt;xs:element name="AttributeText"
+                            type="xs:string" /&gt;
+                &lt;xs:element name="AttributeNumeric"
+                            type="xs:decimal" /&gt;
+                &lt;xs:element name="AttributeDate"
+                            type="xs:date" /&gt;
+            &lt;/xs:choice&gt;
+            &lt;xs:element name="attributeRequired"
+                        type="xs:boolean" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="OperatingHours"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="entityID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="openFlag"
+                        type="xs:boolean" /&gt;
+            &lt;xs:element name="dayOfTheWeek"
+                        type="xs:integer" /&gt;
+            &lt;xs:element name="beginningHour"
+                        type="xs:time" /&gt;
+            &lt;xs:element name="endingHour"
+                        type="xs:time" /&gt;
+            &lt;xs:element name="beginEffectiveDate"
+                        type="xs:date" /&gt;
+            &lt;xs:element name="endEffectiveDate"
+                        type="xs:date" /&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:complexType name="Services"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element name="serviceID"
+                        type="xs:ID" /&gt;
+            &lt;xs:element name="serviceType"
+                        type="xs:string" /&gt;
+            &lt;xs:element name="serviceDescription"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+            &lt;xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:element name="OrganizationDirectory"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="organization"
+                            type="Organizations"
+                            minOccurs="0"
+                            maxOccurs="unbounded" /&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+    &lt;xs:element name="FacilityDirectory"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="facility"
+                            type="Facilities"
+                            minOccurs="0"
+                            maxOccurs="unbounded" /&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+    &lt;xs:element name="ServiceDirectory"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="service"
+                            type="Services"
+                            minOccurs="0"
+                            maxOccurs="unbounded" /&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+    &lt;xs:element name="ProviderDirectory"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="provider"
+                            type="Providers"
+                            minOccurs="0"
+                            maxOccurs="unbounded" /&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+    &lt;xs:element name="FreeBusyService"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="freeBusyResult"
+                            minOccurs="0"
+                            maxOccurs="unbounded"&gt;
+                    &lt;xs:complexType&gt;
+                        &lt;xs:sequence&gt;
+                            &lt;xs:element name="facilityID"
+                                        type="xs:ID" /&gt;
+                            &lt;xs:element name="serviceID"
+                                        type="xs:ID" /&gt;
+                            &lt;xs:element name="providerID"
+                                        type="xs:ID"
+                                        minOccurs="0" /&gt;
+                            &lt;xs:element name="DTSTART"
+                                        type="xs:string" /&gt;
+                            &lt;xs:element name="DTEND"
+                                        type="xs:string"
+                                        minOccurs="0" /&gt;
+                            &lt;xs:element name="DURATION"
+                                        type="xs:string" /&gt;
+                            &lt;xs:element name="FREEBUSY"
+                                        type="xs:string" /&gt;
+                        &lt;/xs:sequence&gt;
+                    &lt;/xs:complexType&gt;
+                &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="ComplexType" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>ComplexTypes:</b></td>
+            </tr>
+            <tr id="ComplexType_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><a href="addresses.html">Addresses</a></li>
+                     <li><a href="contactpoints.html">ContactPoints</a></li>
+                     <li><a href="credentials.html">Credentials</a></li>
+                     <li><a href="facilities.html">Facilities</a></li>
+                     <li><a href="geocodes.html">Geocodes</a></li>
+                     <li><a href="identifiers.html">Identifiers</a></li>
+                     <li><a href="languages.html">Languages</a></li>
+                     <li><a href="names.html">Names</a></li>
+                     <li><a href="operatinghours.html">OperatingHours</a></li>
+                     <li><a href="organizations.html">Organizations</a></li>
+                     <li><a href="persons.html">Persons</a></li>
+                     <li><a href="providers.html">Providers</a></li>
+                     <li><a href="services.html">Services</a></li>
+                     <li><a href="specializations.html">Specializations</a></li>
+                     <li><a href="valuepairs.html">ValuePairs</a></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="Element" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Elements:</b></td>
+            </tr>
+            <tr id="Element_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><a href="facilitydirectory.html">FacilityDirectory</a></li>
+                     <li><a href="freebusyservice.html">FreeBusyService</a></li>
+                     <li><a href="organizationdirectory.html">OrganizationDirectory</a></li>
+                     <li><a href="providerdirectory.html">ProviderDirectory</a></li>
+                     <li><a href="servicedirectory.html">ServiceDirectory</a></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter"> 
+         Generated using <a href="http://www.liquid-technologies.com/">Liquid XML 2013 Designer Edition (Trial) 11.0.9.4562</a><br></br>Featuring a validating <a href="http://www.liquid-technologies.com/XML-Editor.aspx">XML Editor</a></div>
+   </body>
+</html>

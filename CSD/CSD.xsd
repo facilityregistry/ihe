@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML 2013 Designer Edition (Trial) 11.0.9.4562 (http://www.liquid-technologies.com)-->
+<xs:schema elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType name="Organizations">
+        <xs:sequence>
+            <xs:element name="orgID"
+                        type="xs:ID" />
+            <xs:element name="otherOrgID"
+                        type="Identifiers"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="orgType"
+                        type="xs:string" />
+            <xs:element name="orgTypeDescription"
+                        type="xs:string" />
+            <xs:element name="orgPrimaryName"
+                        type="xs:string" />
+            <xs:element name="otherName"
+                        type="Names"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="orgContactPerson"
+                        type="Persons"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="orgAdminAddress"
+                        type="Addresses"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="orgCredential"
+                        type="Credentials"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="orgLanguage"
+                        type="Languages"
+                        maxOccurs="unbounded" />
+            <xs:element name="orgSpecialization"
+                        type="Specializations"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="orgContactPoint"
+                        type="ContactPoints"
+                        maxOccurs="unbounded" />
+            <xs:element name="orgParent"
+                        type="xs:ID"
+                        minOccurs="0" />
+            <xs:element name="orgRecordCreationDate"
+                        type="xs:dateTime" />
+            <xs:element name="orgRecordLastUpdate"
+                        type="xs:dateTime" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Facilities">
+        <xs:sequence>
+            <xs:element name="facilityID"
+                        type="xs:ID" />
+            <xs:element name="otherFacilityID"
+                        type="Identifiers"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="facilityType"
+                        type="xs:string" />
+            <xs:element name="facilityTypeDescription"
+                        type="xs:string" />
+            <xs:element name="facilityStatus"
+                        type="xs:string" />
+            <xs:element name="facilityName"
+                        type="xs:string" />
+            <xs:element name="facilityOtherName"
+                        type="Names"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="facilityAddress"
+                        type="Addresses"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="facilityContactPerson"
+                        type="Persons"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="facilityGeocode"
+                        type="Geocodes"
+                        minOccurs="0" />
+            <xs:element name="facilityAttribute"
+                        type="ValuePairs"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="facilityLanguage"
+                        type="Languages"
+                        maxOccurs="unbounded" />
+            <xs:element name="facilityAccessPoint"
+                        type="ContactPoints"
+                        maxOccurs="unbounded" />
+            <xs:element name="facilityOrgParent"
+                        type="xs:ID"
+                        maxOccurs="unbounded" />
+            <xs:element name="facilityOperatingHours"
+                        type="OperatingHours"
+                        maxOccurs="unbounded" />
+            <xs:element name="facilityService"
+                        maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="facilityID"
+                                    type="xs:ID" />
+                        <xs:element name="serviceID"
+                                    type="xs:ID" />
+                        <xs:element name="facilityServiceOrg"
+                                    type="xs:ID"
+                                    minOccurs="0" />
+                        <xs:element name="facilityServiceName"
+                                    type="Names"
+                                    minOccurs="0"
+                                    maxOccurs="unbounded" />
+                        <xs:element name="facilityServiceLanguage"
+                                    type="Languages"
+                                    minOccurs="0"
+                                    maxOccurs="unbounded" />
+                        <xs:element name="facilityServiceOperatingHours"
+                                    type="OperatingHours"
+                                    minOccurs="0"
+                                    maxOccurs="unbounded" />
+                        <xs:element name="facilityServiceFreeBusyKey"
+                                    minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="facilityID"
+                                                type="xs:ID" />
+                                    <xs:element name="serviceID"
+                                                type="xs:ID" />
+                                    <xs:element name="FreeBusyURI"
+                                                type="xs:string" />
+                                    <xs:element name="facilityServiceFreeBusyAttendee"
+                                                type="xs:string" />
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="facilityServiceProvider"
+                                    minOccurs="0"
+                                    maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="facilityID"
+                                                type="xs:ID" />
+                                    <xs:element name="serviceID"
+                                                type="xs:ID" />
+                                    <xs:element name="providerID"
+                                                type="xs:ID" />
+                                    <xs:element name="facilityServiceProviderOperatingHours"
+                                                type="OperatingHours"
+                                                minOccurs="0" />
+                                    <xs:element name="facilityServiceProviderFreeBusyKey"
+                                                minOccurs="0">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="facilityID"
+                                                            type="xs:ID" />
+                                                <xs:element name="serviceID"
+                                                            type="xs:ID" />
+                                                <xs:element name="providerID"
+                                                            type="xs:ID" />
+                                                <xs:element name="FreeBusyURI"
+                                                            type="xs:string" />
+                                                <xs:element name="facilityServiceProviderFreeBusyAttendee"
+                                                            type="xs:string" />
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="facilityProvider"
+                        minOccurs="0"
+                        maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="facilityID"
+                                    type="xs:ID" />
+                        <xs:element name="provider"
+                                    type="xs:ID" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="facilityRecordCreationDate"
+                        type="xs:dateTime" />
+            <xs:element name="facilityRecordLastUpdate"
+                        type="xs:dateTime" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Providers">
+        <xs:sequence>
+            <xs:element name="providerID"
+                        type="xs:ID" />
+            <xs:element name="otherProviderID"
+                        type="Identifiers"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="providerType"
+                        type="xs:string" />
+            <xs:element name="providerTypeDescription"
+                        type="xs:string" />
+            <xs:element name="providerStatus"
+                        type="xs:string" />
+            <xs:element name="providerDemographic"
+                        type="Persons" />
+            <xs:element name="providerLanguage"
+                        type="Languages"
+                        maxOccurs="unbounded" />
+            <xs:element name="providerOrg"
+                        maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="providerID"
+                                    type="xs:ID" />
+                        <xs:element name="orgID"
+                                    type="xs:ID" />
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="providerFacility"
+                        minOccurs="0"
+                        maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="providerID"
+                                    type="xs:ID" />
+                        <xs:element name="facilityID"
+                                    type="xs:ID" />
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="providerFacilityService"
+                        minOccurs="0"
+                        maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="providerID"
+                                    type="xs:ID" />
+                        <xs:element name="facilityID"
+                                    type="xs:ID" />
+                        <xs:element name="serviceID"
+                                    type="xs:ID" />
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="providerCredential"
+                        type="Credentials"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="providerSpecialty"
+                        type="Specializations"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="providerRecordCreationDate"
+                        type="xs:dateTime" />
+            <xs:element name="providerRecordLastUpdate"
+                        type="xs:dateTime" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Identifiers">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:element name="otherID"
+                        type="xs:string" />
+            <xs:element name="issuingAuthority"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Names">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:element name="CommonName"
+                        type="xs:string" />
+            <xs:element name="honorific"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="foreName"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="otherNames"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="surName"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="suffix"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Persons">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:element name="Name"
+                        type="Names"
+                        maxOccurs="unbounded" />
+            <xs:element name="contactPoint"
+                        type="ContactPoints"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="personAddress"
+                        type="Addresses"
+                        minOccurs="0"
+                        maxOccurs="unbounded" />
+            <xs:element name="personGender"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ContactPoints">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:element name="contactPointType"
+                        type="xs:string" />
+            <xs:element name="contactPointEquipment"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="contactPointPurpose"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="encryptioinCertificate"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="contactPointText"
+                        type="xs:string" />
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Addresses">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:sequence>
+                <xs:element name="AddressLine"
+                            maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="addressType"
+                                              type="xs:string"
+                                              use="required" />
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Credentials">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:element name="credentialType"
+                        type="xs:string" />
+            <xs:element name="credentialName"
+                        type="xs:string" />
+            <xs:element name="credentialNumber"
+                        type="xs:string" />
+            <xs:element name="issuingAuthority"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="credentialDescription"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="credentialIssueDate"
+                        type="xs:date"
+                        minOccurs="0" />
+            <xs:element name="credentialRenewalDate"
+                        type="xs:date"
+                        minOccurs="0" />
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Specializations">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:element name="specializationCode"
+                        type="xs:string" />
+            <xs:element name="specializationDescription"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Languages">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:element name="languageCode"
+                        type="xs:string" />
+            <xs:element name="languageDescription"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Geocodes">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:element name="latitude"
+                        type="xs:decimal" />
+            <xs:element name="longitude"
+                        type="xs:decimal" />
+            <xs:element name="altitude"
+                        type="xs:decimal"
+                        minOccurs="0" />
+            <xs:element name="coordinateSystem"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ValuePairs">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:element name="attributeType"
+                        type="xs:string" />
+            <xs:choice>
+                <xs:element name="AttributeText"
+                            type="xs:string" />
+                <xs:element name="AttributeNumeric"
+                            type="xs:decimal" />
+                <xs:element name="AttributeDate"
+                            type="xs:date" />
+            </xs:choice>
+            <xs:element name="attributeRequired"
+                        type="xs:boolean" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="OperatingHours">
+        <xs:sequence>
+            <xs:element name="entityID"
+                        type="xs:ID" />
+            <xs:element name="openFlag"
+                        type="xs:boolean" />
+            <xs:element name="dayOfTheWeek"
+                        type="xs:integer" />
+            <xs:element name="beginningHour"
+                        type="xs:time" />
+            <xs:element name="endingHour"
+                        type="xs:time" />
+            <xs:element name="beginEffectiveDate"
+                        type="xs:date" />
+            <xs:element name="endEffectiveDate"
+                        type="xs:date" />
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Services">
+        <xs:sequence>
+            <xs:element name="serviceID"
+                        type="xs:ID" />
+            <xs:element name="serviceType"
+                        type="xs:string" />
+            <xs:element name="serviceDescription"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="type"
+                        type="xs:string"
+                        minOccurs="0" />
+            <xs:element name="status"
+                        type="xs:string"
+                        minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="OrganizationDirectory">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="organization"
+                            type="Organizations"
+                            minOccurs="0"
+                            maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FacilityDirectory">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="facility"
+                            type="Facilities"
+                            minOccurs="0"
+                            maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ServiceDirectory">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="service"
+                            type="Services"
+                            minOccurs="0"
+                            maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ProviderDirectory">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="provider"
+                            type="Providers"
+                            minOccurs="0"
+                            maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FreeBusyService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="freeBusyResult"
+                            minOccurs="0"
+                            maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="facilityID"
+                                        type="xs:ID" />
+                            <xs:element name="serviceID"
+                                        type="xs:ID" />
+                            <xs:element name="providerID"
+                                        type="xs:ID"
+                                        minOccurs="0" />
+                            <xs:element name="DTSTART"
+                                        type="xs:string" />
+                            <xs:element name="DTEND"
+                                        type="xs:string"
+                                        minOccurs="0" />
+                            <xs:element name="DURATION"
+                                        type="xs:string" />
+                            <xs:element name="FREEBUSY"
+                                        type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

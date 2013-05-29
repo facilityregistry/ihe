@@ -1,0 +1,245 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs for complexType Providers in CSD XML schema</title>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+                      EnsureInFrame('ComplexType', 'providers');
+                    </script><div class="pageheader">
+         Documentation for CSD XML schema
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>ComplexType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>Providers</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="csd_xsd.html">CSD.xsd</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Abstract</b></td>
+               <td>False</td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="179,432,441,459" href="providerrecordlastupdate.html" alt="Drilldown into providerRecordLastUpdate"></area>
+                     <area shape="rect" coords="179,399,451,426" href="providerrecordcreationdate.html" alt="Drilldown into providerRecordCreationDate"></area>
+                     <area shape="rect" coords="202,366,443,393" href="providerspecialty.html" alt="Drilldown into providerSpecialty"></area>
+                     <area shape="rect" coords="202,333,430,360" href="providercredential.html" alt="Drilldown into providerCredential"></area>
+                     <area shape="rect" coords="202,300,376,327" href="providerfacilityservice.html" alt="Drilldown into providerFacilityService"></area>
+                     <area shape="rect" coords="202,267,335,294" href="providerfacility.html" alt="Drilldown into providerFacility"></area>
+                     <area shape="rect" coords="202,234,315,261" href="providerorg.html" alt="Drilldown into providerOrg"></area>
+                     <area shape="rect" coords="202,201,424,228" href="providerlanguage.html" alt="Drilldown into providerLanguage"></area>
+                     <area shape="rect" coords="179,168,405,195" href="providerdemographic.html" alt="Drilldown into providerDemographic"></area>
+                     <area shape="rect" coords="179,135,365,162" href="providerstatus.html" alt="Drilldown into providerStatus"></area>
+                     <area shape="rect" coords="179,102,421,129" href="providertypedescription.html" alt="Drilldown into providerTypeDescription"></area>
+                     <area shape="rect" coords="179,69,356,96" href="providertype.html" alt="Drilldown into providerType"></area>
+                     <area shape="rect" coords="202,36,411,63" href="otherproviderid.html" alt="Drilldown into otherProviderID"></area>
+                     <area shape="rect" coords="179,3,343,30" href="providerid4.html" alt="Drilldown into providerID"></area></map><img src="images/providers.png" border="0" alt="XSD Diagram of Providers" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;xs:complexType name="Providers"&gt;
+    &lt;xs:sequence&gt;
+        &lt;xs:element name="providerID" type="xs:ID" /&gt;
+        &lt;xs:element name="otherProviderID" type="Identifiers" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="providerType" type="xs:string" /&gt;
+        &lt;xs:element name="providerTypeDescription" type="xs:string" /&gt;
+        &lt;xs:element name="providerStatus" type="xs:string" /&gt;
+        &lt;xs:element name="providerDemographic" type="Persons" /&gt;
+        &lt;xs:element name="providerLanguage" type="Languages" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="providerOrg" maxOccurs="unbounded"&gt;
+            &lt;xs:complexType&gt;
+                &lt;xs:all&gt;
+                    &lt;xs:element name="providerID" type="xs:ID" /&gt;
+                    &lt;xs:element name="orgID" type="xs:ID" /&gt;
+                &lt;/xs:all&gt;
+            &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+        &lt;xs:element name="providerFacility" minOccurs="0" maxOccurs="unbounded"&gt;
+            &lt;xs:complexType&gt;
+                &lt;xs:all&gt;
+                    &lt;xs:element name="providerID" type="xs:ID" /&gt;
+                    &lt;xs:element name="facilityID" type="xs:ID" /&gt;
+                &lt;/xs:all&gt;
+            &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+        &lt;xs:element name="providerFacilityService" minOccurs="0" maxOccurs="unbounded"&gt;
+            &lt;xs:complexType&gt;
+                &lt;xs:all&gt;
+                    &lt;xs:element name="providerID" type="xs:ID" /&gt;
+                    &lt;xs:element name="facilityID" type="xs:ID" /&gt;
+                    &lt;xs:element name="serviceID" type="xs:ID" /&gt;
+                &lt;/xs:all&gt;
+            &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+        &lt;xs:element name="providerCredential" type="Credentials" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="providerSpecialty" type="Specializations" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xs:element name="providerRecordCreationDate" type="xs:dateTime" /&gt;
+        &lt;xs:element name="providerRecordLastUpdate" type="xs:dateTime" /&gt;
+    &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerID</td>
+                        <td><a href="providerid4.html">providerID</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">otherProviderID</td>
+                        <td><a href="otherproviderid.html">otherProviderID</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerType</td>
+                        <td><a href="providertype.html">providerType</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerTypeDescription</td>
+                        <td><a href="providertypedescription.html">providerTypeDescription</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerStatus</td>
+                        <td><a href="providerstatus.html">providerStatus</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerDemographic</td>
+                        <td><a href="providerdemographic.html">providerDemographic</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerLanguage</td>
+                        <td><a href="providerlanguage.html">providerLanguage</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerOrg</td>
+                        <td><a href="providerorg.html">providerOrg</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerFacility</td>
+                        <td><a href="providerfacility.html">providerFacility</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerFacilityService</td>
+                        <td><a href="providerfacilityservice.html">providerFacilityService</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerCredential</td>
+                        <td><a href="providercredential.html">providerCredential</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerSpecialty</td>
+                        <td><a href="providerspecialty.html">providerSpecialty</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerRecordCreationDate</td>
+                        <td><a href="providerrecordcreationdate.html">providerRecordCreationDate</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">providerRecordLastUpdate</td>
+                        <td><a href="providerrecordlastupdate.html">providerRecordLastUpdate</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="derivationTree" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Derivation Tree:</b></td>
+            </tr>
+            <tr id="derivationTree_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><b><i>Providers</i></b></li>
+                     <ul>
+                        <li><a href="provider1.html">provider</a></li>
+                     </ul>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="references" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>References:</b></td>
+            </tr>
+            <tr id="references_body_id">
+               <td width="120px;"></td>
+               <td><a href="provider1.html">provider</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter"> 
+         Generated using <a href="http://www.liquid-technologies.com/">Liquid XML 2013 Designer Edition (Trial) 11.0.9.4562</a><br></br>Featuring <a href="http://www.liquid-technologies.com/Xml-Data-Binding.aspx">XML Code Generation</a></div>
+   </body>
+</html>
